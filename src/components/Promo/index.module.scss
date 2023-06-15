@@ -1,0 +1,168 @@
+.promo {
+    padding: 0 0 170px;
+    overflow: hidden;
+
+    &__block {
+        display: flex;
+        color: var(--textColor);
+        align-items: end;
+        justify-content: space-between;
+        gap: 22px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &_items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            align-items: center;
+            
+            div {
+                border-radius: 30px;
+                padding: 16px 11px;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: center;
+                background: var(--blue);
+                width: 170px;
+            }
+            .item {
+                width: 370px;
+            }
+        }
+    }
+    
+    &__title {
+        font-size: 65px;
+        font-weight: 700;
+        line-height: 70px;
+        text-align: left;
+        max-width: 415px;
+        padding: 50px 0 160px;
+    }
+
+    .decorCash {
+        position: absolute;
+        bottom: 34%;
+        right: 125px;
+        z-index: -1;
+    }
+
+    &__offer {
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+        padding-left: 100px;
+    }
+
+    &__image {
+        max-width: 320px;
+        position: relative;
+        top: -120px;
+    }
+
+    &__cup {
+        min-width: 400px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__decor {
+        width: 200px;
+        height: 300px;
+        top: 30px;
+        right: 80px;
+        background: rgba(68, 21, 255, 0.5);
+        position: absolute;
+        z-index: 1;
+        transform: rotate(11.97deg);
+        filter: blur(86px);
+    }
+    &__decorStar {
+        width: 98px;
+        height: 98px;
+        position: absolute;
+        top: -40px;
+        left: -40px;
+    }
+}
+@media (max-width: 1321px) {
+    .decorCash {
+        position: absolute;
+        bottom: 34%;
+        right: 96px;
+    }
+}
+@media (max-width: 1090px) {
+    .promo {
+        overflow: hidden;
+        &__block {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__text {
+            justify-content: center;
+            align-items: center;
+
+            &_items {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &__title {
+            padding: 50px 0 50px;
+            text-align: center;
+        }
+    
+        &__offer {
+            max-width: 260px;
+            font-size: 23px;
+            text-align: left;
+        }
+    
+        &__image {
+            max-width: 320px;
+            position: relative;
+            top: 100px;
+        }
+        &__decor {
+            right: 0;
+        }
+    }
+}
+@media (max-width: 830px) {
+    .promo {
+        .decorCash {
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .promo {
+        .decorCash {
+            top: 0;
+            left: 0;
+            width: 50px;
+        }
+        &__title {
+            font-size: 30px;
+        }
+
+        &__text {
+            &_items {
+                .item {
+                    max-width: 280px;
+                }
+            }
+        }
+    }
+}

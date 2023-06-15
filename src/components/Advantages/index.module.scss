@@ -1,0 +1,38 @@
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 89px;
+    position: relative;
+    z-index: 9;
+    padding-bottom: 149px;
+
+    .backLine {
+        position: absolute;
+        z-index: -1;
+        top: -554px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        position: relative;
+        margin-bottom: 57px;
+    }
+    .groupDecor {
+        position: absolute;
+        right: -125px;
+        bottom: -210px;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1090px) {
+    .advantages {
+        overflow: hidden;
+        &__cards {
+            grid-template-columns: 1fr;
+        }
+    }
+  }
